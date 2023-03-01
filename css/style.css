@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1400px;
+    padding: 44px 50px 0;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.offer {
+    background: #F2F2F2;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.icon {
+    color: #0065FC;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.title h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 26px;
+}
+
+.title i {
+    font-size: 18px;
+}
+
+.card {
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.cardText > h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.cardText > p {
+    color: #000000;
+    font-size: 14px;
+}
+
+.cardText > .icon {
+    font-size: 12px;
+}
+
+.cardText > .icon > i:nth-child(5) {
+    color: #F2F2F2;
+}
+
+.cardImage {
+    object-fit: cover;
+    padding: 5px;
+}
+
+.listCardsLine > a {
+    display: block;
+    width: 100%;
+}
+
+/**********************************************/
+/******************* Header *******************/
+/**********************************************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    text-align: center;
+}
+
+.links li {
+    width: 162px;
+}
+
+.links li::before {
+    content: "";
+    display: block;
+    width: 162px;
+    height: 2px;
+    background-color: #0065FC;
+    position: relative;
+    top: -44px;
+    opacity: 0;
+}
+
+.links a:hover {
+    color: #0065FC;
+}
+
+.links li:hover::before {
+    opacity: 1;
+}
+
+.logo {
+    width: 61px;
+    height: 19px;
+}
+
+/********************************************/
+/******************* Main *******************/
+/********************************************/
+
+main {
+    margin-top: 63px;
+}
+
+main > section > h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+/* Search */
+
+.search-input {
+    margin-top: 20px;
+    height: 49px;
+}
+
+.search-input > form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input > form > label {
+    width: 50px;
+    height: 49px;
+    background-color: #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input > form > label > i {
+    font-size: 18px;
+}
+
+.search-input > form > input[type="search"] {
+    outline: none;
+    border: none;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    width: 282px;
+    height: 49px;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.search-input > form > input[type="search"]::placeholder {
+    color: #000000;
+}
+
+.search-input > form > button {
+    background-color: #0065FC;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-left: -72px;
+    cursor: pointer;
+}
+
+.search-input > form > button > i {
+    font-size: 0;
+}
+
+/* Filter Bar */
+
+.filterbar {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    gap: 17px;
+}
+
+.filterbar p {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 36px;
+}
+
+.buttons button {
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #FFFFFF;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    height: 48px;
+    padding: 4px 20px;
+}
+
+.buttons button:hover {
+    background-color: #DEEBFF;
+}
+
+.buttons button i {
+    margin-right: 2px;
+}
+
+/* Info Bar */
+
+.infobar {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.infobar i {
+    margin-right: 11px;
+    border: 1px solid #D9D9D9;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+/************************************************/
+/***************** Hébergements *****************/
+/************************************************/
+
+#sectionOffers {
+    margin-top: 37px;
+    display: flex;
+    gap: 40px;
+}
+
+/* Hébergements à Marseille */
+
+.offersMain {
+    width: 70%;
+}
+
+.offersMain > .title {
+    margin-bottom: 23px;
+}
+
+.offersMain > .listCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.offersMain > a {
+    display: block;
+    width: fit-content;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.cardOfferMain {
+    width: 100%;
+    height: 199px;
+}
+
+.cardOfferMain > .cardText {
+    margin-left: 16px;
+}
+
+.cardOfferMain > .cardImage {
+    width: calc(100% - 10px);
+    height: calc(124px - 10px);
+    border-radius: 20px 20px 0 0;
+}
+
+/* Les plus populaires */
+
+.offersSponsored {
+    width: 30%;
+}
+
+.offersSponsored > .title {
+    margin-bottom: 26px;
+}
+
+.offersSponsored > .listCards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cardOfferSponsored {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    height: 144px;
+}
+
+.cardOfferSponsored > .cardText {
+    width: 65%;
+    padding: 16px 0;
+}
+
+.cardOfferSponsored > .cardText > h3 {
+    margin-bottom: 7px;
+}
+
+.cardOfferSponsored > .cardText > .icon {
+    position: absolute;
+    bottom: 12px;
+}
+
+.cardOfferSponsored > .cardImage {
+    width: 37%;
+    height: calc(144px - 10px);
+    border-radius: 20px 0 0 20px;
+}
+
+/*********************************************/
+/***************** Activités *****************/
+/*********************************************/
+
+#sectionActivities {
+    padding: 60px 0;
+}
+
+#sectionActivities > .title {
+    margin-bottom: 18.47px;
+}
+
+#sectionActivities > .listCards {
+    display: flex;
+    justify-content: space-between;
+    gap: 43px;
+}
+
+#sectionActivities > .listCards > .card {
+    width: 302px;
+}
+
+#sectionActivities > .listCards > .card > figure > img {
+    object-fit: cover;
+    width: 100%;
+    height: 388.51px;
+    border-radius: 20px 20px 0 0;
+}
+
+#sectionActivities > .listCards > .card > figure > figcaption {
+    height: 56px;
+    margin: -4px 19px 0px 19px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+/**********************************************/
+/******************* Footer *******************/
+/**********************************************/
+
+footer {
+    min-height: 225px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+footer .footer-content {
+    margin-top: 45px;
+}
+
+footer .footer-content h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+footer .footer-content .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/*****************************************
+**************** Tablette ****************
+*****************************************/
+
+@media screen and (max-width: 992px) {
+    body {
+        max-width: 992px;
+    }
+
+    main > section > h1 {
+        margin-bottom: 13px;
+    }
+
+    .cardText > h3 {
+        font-size: 14px;
+    }
+
+    .cardText > p {
+        font-size: 11px;
+    }
+
+    .listCards {
+        gap: 23px;
+    }
+
+    /* Filtres */
+
+    .filterbar {
+        gap: 17px;
+    }
+
+    .buttons {
+        gap: 22px;
+    }
+
+    /* Section - Offres */
+
+    #sectionOffers {
+        flex-direction: column;
+        width: calc(100% - 60px);
+    }
+
+    /* Section - "Hébergements à Marseille" */
+
+    .offersMain {
+        width: 100%;
+    }
+
+    /* Section "Activités à Marseille" */
+
+    #sectionActivities {
+        padding: 70px 0;
+    }
+
+    #sectionActivities > .title {
+        margin-bottom: 34px;
+    }
+
+    #sectionActivities > .listCards > .card {
+        width: 182px;
+        height: 267px;
+    }
+
+    #sectionActivities > .listCards > .card > figure > img {
+        height: 211px;
+    }
+
+    #sectionActivities > .listCards > .card > figure > figcaption {
+        font-size: 14px;
+    }
+
+    /* Section - Offres "Les plus populaires" */
+
+    .offersSponsored {
+        width: 100%;
+    }
+
+    .offersSponsored > .listCards {
+        flex-direction: row;
+    }
+
+    .cardOfferSponsored {
+        max-width: 252px;
+        width: 100%;
+    }
+
+    .cardOfferSponsored > .cardText {
+        padding: 12px 0;
+    }
+
+    .cardOfferSponsored > .cardImage {
+        width: 100%;
+        max-width: calc(106px - 10px);
+    }
+
+    /* Footer */
+
+    footer {
+        gap: 50px;
+    }
+}
+
+/*****************************************
+***************** Mobile *****************
+*****************************************/
+
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 768px;
+        padding: 0;
+    }
+
+    /* Header */
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 21px 0 48px 0;
+    }
+
+    header > nav {
+        width: 100%;
+    }
+
+    .links {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .links > li {
+        width: 100%;
+        border-bottom: 3px solid #F2F2F2;
+        padding-bottom: 23px;
+    }
+
+    .links > li:hover, .links > li:hover a {
+        border-color: #0065FC;
+        color: #0065FC;
+    }
+
+    .links li::before {
+        display: none;
+    }
+
+    .offer {
+        border-radius: 0;
+    }
+
+    .listCards {
+        gap: 12px;
+    }
+
+    main {
+        margin: 0;
+    }
+
+    .sectionMain {
+        padding: 31px 20px;
+    }
+
+    /* Barre de recherche */
+
+    .search-input > form > input[type="search"] {
+        width: 232px;
+    }
+
+    .search-input > form > button {
+        font-size: 0px;
+        margin: 0;
+        border: 1px solid #0065FC;
+    }
+
+    .search-input > form > button > i {
+        font-size: 17px;
+    }
+
+    /* Filtres */
+
+    .filterbar {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .filterbar > .buttons {
+        grid-template-columns: auto auto;
+        gap: 14px;
+    }
+
+    .filterbar > .buttons > button {
+        width: 200px;
+        height: 50px;
+        font-size: 14px;
+        padding: 0 0 0 13px;
+        text-align: left;
+    }
+
+    .filterbar > .buttons > button > .icon {
+        font-size: 14px;
+    }
+
+    /* Section - Offres */
+
+    #sectionOffers {
+        flex-direction: column-reverse;
+        gap: 26px;
+        margin: 0;
+    }
+
+    /* Section - Offres "Hébergements à Marseille" */
+    
+    .offersMain {
+        background: none;
+    }
+
+    .offersMain > a {
+        display: none;
+    }
+
+    .offersMain > .listCards {
+        grid-template-columns: auto;
+    }
+
+    .cardOfferMain {
+        width: 100%;
+    }
+    
+    /* Section - Offres "Les plus populaires" */
+
+    .offersSponsored > .listCards {
+        flex-direction: column;
+    }
+
+    .cardOfferSponsored {
+        width: 100%;
+        max-width: none;
+    }
+
+    .cardOfferSponsored > .cardImage {
+        max-width: calc(137px - 10px);
+        width: 100%;
+    }
+
+    .cardText > h3 {
+        font-size: 16px;
+    }
+
+    .cardText > p {
+        font-size: 14px;
+    }
+
+    /* Section "Activités à Marseille" */
+
+    #sectionActivities {
+        margin: 0;
+        padding: 105px 30px 90px 30px;
+    }
+
+    #sectionActivities > .title {
+        width: 8em;
+    }
+
+    #sectionActivities > .listCards {
+        flex-direction: column;
+    }
+
+    #sectionActivities > .listCards > .card {
+        width: 100%;
+        height: 190px;
+    }
+
+    #sectionActivities > .listCards > .card > figure > img {
+        height: 134px;
+    }
+    
+    /* Footer */
+
+    footer {
+        flex-direction: column;
+        gap: 0;
+        height: auto;
+        padding: 45px 0 61px 30px;
+    }
+}
